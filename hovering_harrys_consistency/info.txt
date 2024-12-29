@@ -1,0 +1,14 @@
+"ID" "HOVERING_HARRYS_CONSISTENCY"
+"Name" "Hovering Harry's items for consistency"
+"Desc" "I don't have blender please help"
+"Item"
+{
+	"ID"  "ITEM_LASER_CATCHER_BIG"
+	"Version"
+	{
+		"Styles"
+		{
+			"ANY_STYLE" "laser_catcher_big"
+		}
+	}
+}
