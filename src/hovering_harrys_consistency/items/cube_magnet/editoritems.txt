@@ -1,0 +1,138 @@
+"Item"
+{
+	"Type"		"ITEM_CUBE_MAGNET"
+	"Editor"
+	{
+		"SubType"
+		{
+			"Name"  "Cube magnet"
+			"Model" "laserrecw.3ds"
+			"Palette"
+			{
+				"Tooltip"		"CUBE MAGNET"
+				"Image"			"palette/cube_magnet.png"
+				"Position"		"4 2 0"
+			}
+			"Sounds"
+			{
+			"SOUND_CREATED"			"P2Editor.PlaceOther"
+			"SOUND_EDITING_ACTIVATE"	"P2Editor.ExpandOther"
+			"SOUND_EDITING_DEACTIVATE"	"P2Editor.CollapseOther"
+			"SOUND_DELETED"			"P2Editor.RemoveOther"
+			}
+			"Animations"
+			{
+				"ANIM_IDLE"			"0"
+				"ANIM_EDITING_ACTIVATE"		"1"
+				"ANIM_EDITING_DEACTIVATE"	"2"
+			}
+		}
+		"MovementHandle"		"HANDLE_NONE"
+	}
+	"Properties"
+	{
+		"ConnectionCount"   
+		{
+			"DefaultValue"  "0"
+			"Index"         "1"
+		}
+	}
+	"Exporting"
+	{
+		"Instances"
+		{
+			"0"
+			{
+				"Name"				"instances/BEE2/hovering_harry/cube_magnet.vmf"
+				"EntityCount"		"3"
+				"BrushCount"		"4"
+				"BrushSideCount"	"27"
+			}
+		}
+
+		"TargetName"		"lc"
+		"Inputs"
+		{
+			"BEE2"
+			{
+				"Type"  "AND"
+				
+				"Enable_Cmd"        "relay,TurnOff,,0.00,-1"
+				"Disable_Cmd"       "relay,TurnOn,,0.00,-1"
+			}
+		}
+		"Outputs"
+		{
+		}
+
+		"Offset"		"64 64 64"
+
+		"ConnectionPoints"
+		{
+			// left
+			"Point"
+			{
+				"Dir"				"1 0 0"
+				"Pos"				"-2 3 0"
+				"SignageOffset"		"-2 2 0"
+				"Priority"	"0"
+			}
+			"Point"
+			{
+				"Dir"				"1 0 0"
+				"Pos"				"-2 4 0"
+				"SignageOffset"		"-2 5 0"
+				"Priority"	"0"
+			}
+
+			// right
+			"Point"
+			{
+				"Dir"				"-1 0 0"
+				"Pos"				"5 3 0"
+				"SignageOffset"		"5 2 0"
+				"Priority"	"0"
+			}
+			"Point"
+			{
+				"Dir"				"-1 0 0"
+				"Pos"				"5 4 0"
+				"SignageOffset"		"5 5 0"
+				"Priority"	"0"
+			}
+
+			// top
+			"Point"
+			{
+				"Dir"				"0 -1 0"
+				"Pos"				"1 6 0"
+				"SignageOffset"		"0 7 0"
+				"Priority"	"0"
+			}
+			"Point"
+			{
+				"Dir"				"0 -1 0"
+				"Pos"				"2 6 0"
+				"SignageOffset"		"3 7 0"
+				"Priority"	"0"
+			}
+
+
+			// bottom
+			"Point"
+			{
+				"Dir"				"0 1 0"
+				"Pos"				"1 1 0"
+				"SignageOffset"		"0 0 0"
+				"Priority"	"0"
+			}
+			"Point"
+			{
+				"Dir"				"0 1 0"
+				"Pos"				"2 1 0"
+				"SignageOffset"		"3 0 0"
+				"Priority"	"0"
+			}
+		}
+	}
+}

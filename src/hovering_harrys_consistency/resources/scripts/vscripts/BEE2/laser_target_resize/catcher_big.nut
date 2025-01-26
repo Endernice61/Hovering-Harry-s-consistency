@@ -1,0 +1,1 @@
+EntityGroup[0].SetSize(Vector(-64,-16,-64),Vector(64,16,64));

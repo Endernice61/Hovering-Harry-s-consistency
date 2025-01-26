@@ -1,0 +1,99 @@
+"ID" "HOVERING_HARRYS_CONSISTENCY"
+"Name" "Hovering Harry's items for consistency"
+"Desc" "Blender can't run on my computer please help"
+"Item"
+{
+	"ID"  "ITEM_LASER_CATCHER_BIG"
+	"Version"
+	{
+		"Styles"
+		{
+			"ANY_STYLE" "laser_catcher_big"
+		}
+	}
+}
+"Item"
+{
+	"ID"  "ITEM_CUBE_MAGNET"
+	"Version"
+	{
+		"Styles"
+		{
+			"ANY_STYLE" "cube_magnet"
+		}
+	}
+}
+
+"ConfigGroup"
+{
+	"ID"    "CONSISTENCY"
+	"Name"  "Consistency"
+	"Widget"
+	{
+		"ID"		"CubeMagnetMaxVelocity"
+		"Type"		"Slider"
+		"Default"	"75"
+
+		"Min"		"30"
+		"Max"		"150"
+		"Step"		"5"
+	
+		"Label"   "Cube Magnet speed to reduce to"
+	
+		"Tooltip" "Reduces the speed of physics objects to this speed in order to prevent unwanted velocities"
+	}
+	"Widget"
+	{
+		"ID"		"CubeMagnetVelocityReduction"
+		"Type"		"Slider"
+		"Default"	"90"
+
+		"Min"		"5"
+		"Max"		"150"
+		"Step"		"5"
+	
+		"Label"   "Cube Magnet speed reduction amount"
+	
+		"Tooltip" "Amount to reduce the cube speed by per second when it is above the speed limit"
+	}
+	"Widget"
+	{
+		"ID"		"CubeMagnetPullForce"
+		"Type"		"Slider"
+		"Default"	"-90"
+
+		"Min"		"-180"
+		"Max"		"-30"
+		"Step"		"5"
+	
+		"Label"   "Cube Magnet Pull Force"
+	
+		"Tooltip" "Strength of the pulling force of the magnet"
+	}
+	"Widget"
+	{
+		"ID"		"CubeMagnetRadius"
+		"Type"		"Slider"
+		"Default"	"180"
+
+		"Min"		"60"
+		"Max"		"210"
+		"Step"		"5"
+	
+		"Label"   "Cube Magnet radius"
+	
+		"Tooltip" "Reach of the cube magnet"
+	}
+}
+
+"Item"
+{
+	"ID"  "ITEM_LASER_CATCHER_LENIENT"
+	"Version"
+	{
+		"Styles"
+		{
+			"ANY_STYLE" "laser_catcher_lenient"
+		}
+	}
+}
