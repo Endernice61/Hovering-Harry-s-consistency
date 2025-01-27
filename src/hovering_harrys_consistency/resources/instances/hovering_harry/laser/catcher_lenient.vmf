@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8869"
-	"mapversion" "116"
+	"mapversion" "126"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -14,7 +14,7 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "16"
+	"nGridSpacing" "1"
 }
 palette_plus
 {
@@ -89,7 +89,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "116"
+	"mapversion" "126"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -993,6 +993,7 @@ entity
 	"StartDisabled" "0"
 	"SuppressAnimSounds" "0"
 	"targetname" "catcher_mdl"
+	"vscripts" "bee2/hovering_harry/laser_receiver_animation"
 	"origin" "-31.95 0 -80"
 	editor
 	{
@@ -1012,12 +1013,14 @@ entity
 	{
 		"OnPowered" "catcher_mdlSkin10-1"
 		"OnUnpowered" "catcher_mdlSkin00-1"
-		"OnPowered" "catcher_mdlSetPlaybackRate10-1"
-		"OnUnpowered" "catcher_mdlSetPlaybackRate00-1"
+		"OnPowered" "catcher_mdlRunScriptCodeSetAnimation(1)0-1"
+		"OnUnpowered" "catcher_mdlRunScriptCodeSetAnimation(-1)0-1"
 		"OnPowered" "catcher_snd_onPlaySound0-1"
 		"OnUnpowered" "catcher_snd_offPlaySound0-1"
 		"OnUnpowered" "catcher_snd_loopVolume00-1"
 		"OnPowered" "catcher_snd_loopVolume100-1"
+		"OnUnpowered" "catcher_particleStop0-1"
+		"OnPowered" "catcher_particleStart0-1"
 	}
 	"origin" "-31.95 0 -48"
 	editor
@@ -1181,6 +1184,42 @@ entity
 		"OnPowered" "catcher_snd_loopVolume100-1"
 	}
 	"origin" "-31.95 16 -16"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "676"
+	"classname" "info_particle_system"
+	"angles" "-90 0 0"
+	"cpoint1_parent" "0"
+	"cpoint2_parent" "0"
+	"cpoint3_parent" "0"
+	"cpoint4_parent" "0"
+	"cpoint5_parent" "0"
+	"cpoint6_parent" "0"
+	"cpoint7_parent" "0"
+	"drawinfastreflection" "0"
+	"effect_name" "laser_relay_powered"
+	"start_active" "0"
+	"targetname" "catcher_particle"
+	connections
+	{
+		"OnPowered" "catcher_mdlSkin10-1"
+		"OnUnpowered" "catcher_mdlSkin00-1"
+		"OnPowered" "catcher_mdlSetPlaybackRate10-1"
+		"OnUnpowered" "catcher_mdlSetPlaybackRate00-1"
+		"OnPowered" "catcher_snd_onPlaySound0-1"
+		"OnUnpowered" "catcher_snd_offPlaySound0-1"
+		"OnUnpowered" "catcher_snd_loopVolume00-1"
+		"OnPowered" "catcher_snd_loopVolume100-1"
+	}
+	"origin" "-31.95 0 -58.5"
 	editor
 	{
 		"color" "220 30 220"
