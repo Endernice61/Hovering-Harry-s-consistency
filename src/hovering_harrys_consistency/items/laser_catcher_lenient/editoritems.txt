@@ -1,6 +1,6 @@
 "Item"
 	{
-	"Type"		"ITEM_LASER_CATCHER_BIG"
+	"Type"		"ITEM_LASER_CATCHER_LENIENT"
 	"Editor"
 		{
 		"SubTypeProperty" "CubeType"
