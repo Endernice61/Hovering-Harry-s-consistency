@@ -1,0 +1,321 @@
+versioninfo
+{
+	"editorversion" "400"
+	"editorbuild" "8869"
+	"mapversion" "148"
+	"formatversion" "100"
+	"prefab" "0"
+}
+visgroups
+{
+}
+viewsettings
+{
+	"bSnapToGrid" "1"
+	"bShowGrid" "1"
+	"bShowLogicalGrid" "0"
+	"nGridSpacing" "32"
+}
+palette_plus
+{
+	"color0" "255 255 255"
+	"color1" "255 255 255"
+	"color2" "255 255 255"
+	"color3" "255 255 255"
+	"color4" "255 255 255"
+	"color5" "255 255 255"
+	"color6" "255 255 255"
+	"color7" "255 255 255"
+	"color8" "255 255 255"
+	"color9" "255 255 255"
+	"color10" "255 255 255"
+	"color11" "255 255 255"
+	"color12" "255 255 255"
+	"color13" "255 255 255"
+	"color14" "255 255 255"
+	"color15" "255 255 255"
+}
+colorcorrection_plus
+{
+	"name0" ""
+	"weight0" "1"
+	"name1" ""
+	"weight1" "1"
+	"name2" ""
+	"weight2" "1"
+	"name3" ""
+	"weight3" "1"
+}
+light_plus
+{
+	"samples_sun" "6"
+	"samples_ambient" "40"
+	"samples_vis" "256"
+	"texlight" ""
+	"incremental_delay" "0"
+	"bake_dist" "1024"
+	"radius_scale" "1"
+	"brightness_scale" "1"
+	"ao_scale" "0"
+	"bounced" "1"
+	"incremental" "1"
+	"supersample" "0"
+	"bleed_hack" "1"
+	"soften_cosine" "0"
+	"debug" "0"
+	"cubemap" "1"
+}
+postprocess_plus
+{
+	"enable" "1"
+	"copied_from_controller" "1"
+	"bloom_scale" "1"
+	"bloom_exponent" "2.5"
+	"bloom_saturation" "1"
+	"auto_exposure_min" "0.5"
+	"auto_exposure_max" "2"
+	"tonemap_percent_target" "60"
+	"tonemap_percent_bright_pixels" "2"
+	"tonemap_min_avg_luminance" "3"
+	"tonemap_rate" "1"
+	"vignette_enable" "1"
+	"vignette_start" "1"
+	"vignette_end" "2"
+	"vignette_blur" "0"
+}
+bgimages_plus
+{
+}
+world
+{
+	"id" "1"
+	"mapversion" "148"
+	"classname" "worldspawn"
+	"detailmaterial" "detail/detailsprites"
+	"detailvbsp" "detail.vbsp"
+	"maxblobcount" "250"
+	"maxpropscreenwidth" "-1"
+	"skyname" "sky_day01_01"
+}
+entity
+{
+	"id" "1316"
+	"classname" "comp_relay"
+	"ctrl_type" "0"
+	"ctrl_value" "1"
+	"delay" "0.0"
+	"targetname" "input"
+	connections
+	{
+		"OnTurnedOn" "triggerEnable0.01-1"
+		"OnTurnedOn" "wake_trigDisable0.01-1"
+		"OnTurnedOn" "armSkin00-1"
+		"OnTurnedOn" "wake_trigEnable0-1"
+		"OnTurnedOn" "flash_timDisable0-1"
+		"OnTurnedOn" "sprColor0 255 2550-1"
+		"OnTurnedOff" "triggerDisable0.01-1"
+		"OnTurnedOff" "flash_timEnable0-1"
+		"OnTurnedOff" "armSkin10-1"
+		"OnTurnedOff" "sprColor255 128 00-1"
+	}
+	"origin" "0 0 -48"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "1211"
+	"classname" "logic_timer"
+	"angles" "0 0 0"
+	"RefireTime" "0.5"
+	"spawnflags" "1"
+	"StartDisabled" "$start_enabled"
+	"targetname" "flash_tim"
+	"UseRandomTime" "0"
+	connections
+	{
+		"OnTimerLow" "armSkin10-1"
+		"OnTimerHigh" "armSkin00-1"
+		"OnTimerLow" "sprColor255 128 00-1"
+		"OnTimerHigh" "sprColor0 255 2550-1"
+	}
+	"origin" "0 -16 -48"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "1199"
+	"classname" "trigger_push"
+	"alternateticksfix" "0"
+	"origin" "-0 -0 -60"
+	"pushdir" "-90 0 0"
+	"solid" "6"
+	"spawnflags" "4104"
+	"speed" "80"
+	"startdisabled" "1"
+	"targetname" "wake_trig"
+	connections
+	{
+		"OnStartTouch" "!activatorExitDisabledState0-1"
+	}
+	solid
+	{
+		"id" "1200"
+		side
+		{
+			"id" "1"
+			"plane" "(-64 -64 -56) (-64 64 -56) (64 64 -56)"
+			vertices_plus
+			{
+				"v" "-64 -64 -56"
+				"v" "-64 64 -56"
+				"v" "64 64 -56"
+				"v" "64 -64 -56"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[-1 0 0 0] 0.25"
+			"vaxis" "[0 1 0 -24] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "2"
+			"plane" "(-64 64 -64) (-64 -64 -64) (64 -64 -64)"
+			vertices_plus
+			{
+				"v" "-64 64 -64"
+				"v" "-64 -64 -64"
+				"v" "64 -64 -64"
+				"v" "64 64 -64"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[-1 0 0 0] 0.25"
+			"vaxis" "[0 1 0 -24] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "3"
+			"plane" "(64 64 -64) (64 -64 -64) (64 -64 -56)"
+			vertices_plus
+			{
+				"v" "64 64 -64"
+				"v" "64 -64 -64"
+				"v" "64 -64 -56"
+				"v" "64 64 -56"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 -1 0 24] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "4"
+			"plane" "(-64 -64 -64) (-64 64 -64) (-64 64 -56)"
+			vertices_plus
+			{
+				"v" "-64 -64 -64"
+				"v" "-64 64 -64"
+				"v" "-64 64 -56"
+				"v" "-64 -64 -56"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 -1 0 24] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "5"
+			"plane" "(64 -64 -64) (-64 -64 -64) (-64 -64 -56)"
+			vertices_plus
+			{
+				"v" "64 -64 -64"
+				"v" "-64 -64 -64"
+				"v" "-64 -64 -56"
+				"v" "64 -64 -56"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[-1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "6"
+			"plane" "(-64 64 -64) (64 64 -64) (64 64 -56)"
+			vertices_plus
+			{
+				"v" "-64 64 -64"
+				"v" "64 64 -64"
+				"v" "64 64 -56"
+				"v" "-64 64 -56"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[-1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"comments" "When enabled, wake props so they can be thrown."
+		"logicalpos" "[0 61513]"
+	}
+}
+entity
+{
+	"id" "1184"
+	"classname" "func_instance_parms"
+	"parm1" "$connectioncount integer 1"
+	"parm2" "$start_enabled integer 0"
+	"origin" "0 16 -48"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+cameras
+{
+	"activecamera" "-1"
+}
+cordons
+{
+	"active" "0"
+}
