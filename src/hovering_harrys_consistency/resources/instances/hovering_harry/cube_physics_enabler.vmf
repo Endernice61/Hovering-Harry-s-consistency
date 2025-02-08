@@ -1,0 +1,63 @@
+versioninfo
+{
+	"editorversion" "400"
+	"editorbuild" "9672"
+	"mapversion" "711"
+	"formatversion" "100"
+	"prefab" "0"
+}
+visgroups
+{
+}
+viewsettings
+{
+	"bSnapToGrid" "1"
+	"bShowGrid" "1"
+	"bShowLogicalGrid" "0"
+	"nGridSpacing" "32"
+	"bShow3DGrid" "0"
+}
+world
+{
+	"id" "1"
+	"mapversion" "711"
+	"classname" "worldspawn"
+	"detailmaterial" "detail/detailsprites"
+	"detailvbsp" "detail.vbsp"
+	"maxblobcount" "250"
+	"maxpropscreenwidth" "-1"
+	"paintinmap" "1"
+	"skyname" "sky_black_nofog"
+	"startdark" "1"
+}
+entity
+{
+	"id" "79780"
+	"classname" "logic_script"
+	"targetname" "waker"
+	"thinkfunction" "WakeAllCubes"
+	"vscripts" "bee2/cube_physics_enabler"
+	connections
+	{
+		"OnTrigger" "@good_blueSetActivatedState00-1"
+		"OnTrigger" "@bad_blueSetActivatedState00-1"
+		"OnTrigger" "@bad_blueFizzle0-1"
+		"OnTrigger" "@good_blueSetActivatedState10.04-1"
+	}
+	"origin" "0 0 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+cameras
+{
+	"activecamera" "-1"
+}
+cordons
+{
+	"active" "0"
+}
