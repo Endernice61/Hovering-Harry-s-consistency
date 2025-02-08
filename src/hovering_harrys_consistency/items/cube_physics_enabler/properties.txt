@@ -1,0 +1,8 @@
+"Properties" {
+	"Authors" "Hovering Harry"
+	"Description" "Enables cube physics every tenth of a second"
+	"Icon"
+	{
+		"0" "hovering_harry/cube_physics_enabler.png"
+	}
+}
