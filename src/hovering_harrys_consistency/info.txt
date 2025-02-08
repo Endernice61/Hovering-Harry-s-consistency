@@ -97,3 +97,25 @@
 		}
 	}
 }
+"Item"
+	{
+	"ID"       "ITEM_CATAPULT_RESIZED"
+	"all_conf" "faith_resized"
+	"Version"
+		{
+		"Styles"
+			{
+			"BEE2_CLEAN"
+				{
+				"Folder" "faith_resized"
+				"Instances"
+					{
+					"bee2_small"    "instances/BEE2/hovering_harry/faith_plate/small.vmf"
+					"bee2_small_io" "instances/BEE2/hovering_harry/faith_plate/small_io.vmf"
+					"bee2_large"    "instances/BEE2/hovering_harry/faith_plate/large.vmf"
+					"bee2_large_io" "instances/BEE2/hovering_harry/faith_plate/large_io.vmf"
+					}
+				}
+			}
+		}
+	}
