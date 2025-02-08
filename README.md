@@ -6,3 +6,5 @@ This ucp contains:
 - Faith plate with more options:
     Start Active makes the large trigger larger
     Timer Delay adds air control suppression time
+- Cube physics enabler and widget to replace it
+- Portal gun on/off trigger button
