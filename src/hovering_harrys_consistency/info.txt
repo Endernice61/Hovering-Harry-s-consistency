@@ -30,6 +30,16 @@
 	"Name"  "Consistency"
 	"Widget"
 	{
+			"ID"      "CubePhysicsEnabler"
+			"Type"    "Checkbox"
+			"Default" "0"
+		
+			"Label"   "Reenable Cube Physics"
+		
+			"Tooltip" "Reenables cube physics so that cubes no longer float mid-air"
+	}
+	"Widget"
+	{
 		"ID"		"CubeMagnetMaxVelocity"
 		"Type"		"Slider"
 		"Default"	"75"
@@ -119,3 +129,62 @@
 			}
 		}
 	}
+
+"Item"
+	{
+	"ID" "ITEM_TULEBY_PORTALGUN_BUTTON_TRIGGER"
+	"Authors" "tuleby (CZ), Hovering Harry"
+	"Tags" "Portalgun ON-OFF; Button"
+	"Description"
+		{
+		"" "A special button which controls the player's gun."
+		"" ""
+		"" "* When any are pressed, the player has a portal gun."
+		"" "* When not pressed, the player has no portal gun - they cannot fire and fizzlers no longer affect them."
+		"" "* The blue button is only pressable by players, the orange button can be pressed by any user."
+		"" "* The special dissolve trigger is for use when making multi-chamber maps. When the player touches it, cubes on orange buttons will be dissolved."
+		}
+	"Version"
+		{
+		"Styles"
+			{
+			"BEE2_CLEAN"    "pgun_on_off_trigger"
+			"BEE2_PORTAL_1"
+				{
+				"Folder"    "pgun_on_off_trigger"
+				"Instances"
+					{
+					"0" "instances/BEE2/p1/items/tuleby/pgun_button_blue.vmf"
+					"1" "instances/BEE2/p1/items/tuleby/pgun_button_blue.vmf"
+					"2" "instances/BEE2/p1/items/tuleby/pgun_button_oran.vmf"
+					"3" "instances/BEE2/p1/items/tuleby/pgun_button_oran.vmf"
+					}
+				}
+			
+			"BEE2_1950s"
+				{
+				"Folder"    "pgun_on_off_trigger"
+				"Config"    "pgun_on_off_retro_trigger.cfg"
+				"Instances"
+					{
+					"0" "instances/BEE2/50s/items/tuleby/pgun_button_blue.vmf"
+					"1" "instances/BEE2/50s/items/tuleby/pgun_button_blue.vmf"
+					"2" "instances/BEE2/50s/items/tuleby/pgun_button_oran.vmf"
+					"3" "instances/BEE2/50s/items/tuleby/pgun_button_oran.vmf"
+					}
+				}
+			}
+		}
+	}
+
+"Item"
+{
+	"ID"  "ITEM_CUBE_PHYSICS_ENABLER"
+	"Version"
+	{
+		"Styles"
+		{
+			"ANY_STYLE" "cube_physics_enabler"
+		}
+	}
+}
