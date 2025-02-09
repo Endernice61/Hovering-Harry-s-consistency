@@ -1,1 +1,10 @@
-EntityGroup[0].SetSize(Vector(-64,-16,-64),Vector(64,16,64));
+catcher <- EntityGroup[0];
+up <- catcher.GetUpVector();
+up <- up*up.Dot(Vector(16,16,16));
+fw <- catcher.GetForwardVector();
+fw <- fw*fw.Dot(Vector(64,64,64));
+left <- catcher.GetLeftVector();
+left <- left*left.Dot(Vector(64,64,64));
+bound_mins <- Vector(0,0,0)-up-fw-left;
+bound_maxs <- up+fw+left;
+catcher.SetSize(bound_mins,bound_maxs);
