@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8869"
-	"mapversion" "126"
+	"mapversion" "127"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -89,7 +89,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "126"
+	"mapversion" "127"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -1155,6 +1155,7 @@ entity
 		"OnMapSpawn" "catcher_snd_loopPlaySound0-1"
 		"OnMapSpawn" "catcher_mdlSetAnimationspin0-1"
 		"OnMapSpawn" "catcher_mdlSetPlaybackRate00.5-1"
+		"OnMapSpawn" "catcher_snd_loopVolume00.01-1"
 	}
 	"origin" "-31.95 0 -16"
 	editor

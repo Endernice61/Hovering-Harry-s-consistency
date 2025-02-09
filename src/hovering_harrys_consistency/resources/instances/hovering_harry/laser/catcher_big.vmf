@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8869"
-	"mapversion" "106"
+	"mapversion" "107"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -89,7 +89,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "106"
+	"mapversion" "107"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -780,16 +780,6 @@ world
 			"visgroupautoshown" "1"
 		}
 	}
-	group
-	{
-		"id" "555"
-		editor
-		{
-			"color" "158 191 0"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-		}
-	}
 }
 entity
 {
@@ -802,6 +792,8 @@ entity
 	"invert" "0"
 	"kv_name" "model"
 	"kv_value_global" "models/props/laser_catcher.mdl"
+	"kv_value_mode" "legacy"
+	"kv_value_pos" "-52 -20 -52"
 	"mode" "kv"
 	"rotate" "0"
 	"target" "//catcher"
@@ -1183,6 +1175,7 @@ entity
 		"OnMapSpawn" "catcher_snd_loopPlaySound0-1"
 		"OnMapSpawn" "catcher_mdlSetAnimationspin0-1"
 		"OnMapSpawn" "catcher_mdlSetPlaybackRate00.5-1"
+		"OnMapSpawn" "catcher_snd_loopVolume00.01-1"
 	}
 	"origin" "0.0499992 -16 -16"
 	editor
