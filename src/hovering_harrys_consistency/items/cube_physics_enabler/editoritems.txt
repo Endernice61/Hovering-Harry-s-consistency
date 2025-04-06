@@ -42,12 +42,26 @@
 			"DefaultValue"	"0"
 			"Index"	"1"
 		}
+		"StartEnabled"
+		{
+			"DefaultValue"	"1"
+			"Index"	"2"
+		}
 	}
 	"Exporting"
 	{
 		"Inputs"
 		{
+			"BEE2"
+				{
+				"Type"              "AND"
 
+				"InvertVar"     "$start_enabled"
+				"Enable_Cmd"    "waker,RunScriptCode,EnableWaker(),0.00,-1"
+				"Disable_Cmd"   "waker,RunScriptCode,DisableWaker(),0.00,-1"
+
+				"SpawnFire"	"dynamic"
+				}
 		}
 		"Outputs"
 		{
