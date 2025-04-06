@@ -1,6 +1,11 @@
 "Properties" {
 	"Authors" "Hovering Harry"
-	"Description" "Enables cube physics every tenth of a second"
+	"Description" {
+		"" "Enables cube physics every tenth of a second  "
+		"" "Inputs to this item will enable/disable the cube physics enabler  "
+		"" "**Start Enabled** will determine if the cube physics enabler starts enabled, if and only if it is connected, otherwise it will start on by default  "
+		"" "Note for using a connection: reflector cubes that are already floating because of lasers will remain floating, otherwise this item enabling physics will work fine"
+	}
 	"Icon"
 	{
 		"0" "hovering_harry/cube_physics_enabler.png"
