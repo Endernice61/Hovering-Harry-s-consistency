@@ -1,0 +1,10 @@
+catcher <- Entities.FindByClassnameNearest("point_laser_target",self.GetCenter(),128.0);
+up <- catcher.GetUpVector();
+up <- up*up.Dot(Vector(39,39,39));
+fw <- catcher.GetForwardVector();
+fw <- fw*fw.Dot(Vector(32,32,32));
+left <- catcher.GetLeftVector();
+left <- left*left.Dot(Vector(32,32,32));
+bound_mins <- Vector(0,0,0)-up-fw-left;
+bound_maxs <- up+fw+left;
+catcher.SetSize(bound_mins,bound_maxs);
