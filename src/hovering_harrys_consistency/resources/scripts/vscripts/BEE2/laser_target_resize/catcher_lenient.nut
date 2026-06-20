@@ -1,5 +1,5 @@
 function OnPostSpawn() {
-	catcher <- Entities.FindByClassnameNearest("point_laser_target",self.GetCenter(),32);
+	catcher <- Entities.FindByClassnameNearest("prop_laser_catcher",self.GetCenter(),32);
 	up <- catcher.GetForwardVector();
 	updir <- up.Dot(Vector(1,1,1));
 	up <- up*updir*8;
@@ -9,11 +9,12 @@ function OnPostSpawn() {
 	} else {
 		down <- down*2;
 	}
-	fw <- catcher.GetLeftVector();
+	fw <- catcher.GetUpVector();
 	fw <- fw*fw.Dot(Vector(32,32,32));
-	left <- catcher.GetUpVector();
+	left <- catcher.GetLeftVector();
 	left <- left*left.Dot(Vector(40,40,40));
 	bound_mins <- Vector(0,0,0)-down-fw-left;
 	bound_maxs <- up+fw+left;
+	catcher <- Entities.FindByClassnameNearest("point_laser_target",self.GetCenter(),32);
 	catcher.SetSize(bound_mins,bound_maxs);
 }
