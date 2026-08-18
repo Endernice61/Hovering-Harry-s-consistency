@@ -1,8 +1,8 @@
 versioninfo
 {
 	"editorversion" "400"
-	"editorbuild" "8869"
-	"mapversion" "71"
+	"editorbuild" "8870"
+	"mapversion" "72"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -95,7 +95,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "71"
+	"mapversion" "72"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -757,6 +757,8 @@ entity
 		"OnTurnedOff" "slowDisable0-1"
 		"OnTurnedOn" "slowEnable0-1"
 		"OnTurnedOn" "pullEnable0-1"
+		"OnTurnedOn" "slow2Enable0-1"
+		"OnTurnedOff" "slow2Disable0-1"
 	}
 	"origin" "0 0 0"
 	editor
