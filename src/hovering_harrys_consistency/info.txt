@@ -116,6 +116,16 @@
 		
 			"Tooltip" "Prevents the low gravity property of funnels from being preserved when players leave them"
 	}
+	"Widget"
+	{
+			"ID"      "FixRCFunnelCollision"
+			"Type"    "Checkbox"
+			"Default" "1"
+		
+			"Label"   "Fix Reflector Cube Losing Collision"
+		
+			"Tooltip" "Prevents dropped reflector cubes from losing collision and picked up cubes from gaining collision when they touch funnels"
+	}
 }
 
 "Item"
