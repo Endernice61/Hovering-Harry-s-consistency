@@ -50,16 +50,16 @@
 		
 			"Tooltip" "Reenables cube physics so that cubes no longer float mid-air"
 	}
-	"Widget"
-	{
-			"ID"      "DisableCrouchFly"
-			"Type"    "Checkbox"
-			"Default" "0"
+	// "Widget"
+	// {
+			// "ID"      "DisableCrouchFly"
+			// "Type"    "Checkbox"
+			// "Default" "0"
 		
-			"Label"   "Disable Crouch Fly"
+			// "Label"   "Disable Crouch Fly"
 		
-			"Tooltip" "Prevents the low gravity property of funnels from being preserved when players leave them"
-	}
+			// "Tooltip" "Prevents the low gravity property of funnels from being preserved when players leave them"
+	// }
 	"Widget"
 	{
 			"ID"      "FixRCFunnelCollision"
