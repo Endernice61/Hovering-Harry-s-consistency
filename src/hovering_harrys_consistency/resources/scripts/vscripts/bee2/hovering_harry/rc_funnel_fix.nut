@@ -1,4 +1,5 @@
 enum CollisionGroup {
+	DEBRIS_TRIGGER = 2,//Used in coop instead of PLAYER_HELD, unless near lasers. Always using PLAYER_HELD does not seem to change anything though...
 	PLAYER_HELD = 23,
 	WEIGHTED_CUBE = 24
 }
@@ -11,11 +12,12 @@ function addCube(cube) {
 }
 
 getroottable().RCFunnelFixPickup <- function() {
-	rc_funnel_fix_held <- true;
+	self.GetScriptScope().rc_funnel_fix_held <- true;
 	self.__KeyValueFromInt("CollisionGroup",CollisionGroup.PLAYER_HELD);
 };
 getroottable().RCFunnelFixDrop <- function() {
-	rc_funnel_fix_held <- false;
+	if (!self.IsValid()) { return; }//Cube is fizzled
+	self.GetScriptScope().rc_funnel_fix_held <- false;
 	self.__KeyValueFromInt("CollisionGroup",CollisionGroup.WEIGHTED_CUBE);
 };
 getroottable().RCFunnelFixCubeUpdate <- function() {
