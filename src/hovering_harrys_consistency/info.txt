@@ -72,6 +72,16 @@
 	}
 	"Widget"
 	{
+			"ID"      "ForceAddLogic"
+			"Type"    "Checkbox"
+			"Default" "0"
+		
+			"Label"   "Force Add Background Logic"
+		
+			"Tooltip" "Certain fixes only get added if certain items are present in the map. Check this to override the optimization and place the background logic in anyway"
+	}
+	"Widget"
+	{
 		"ID"		"CubeMagnetMaxVelocity"
 		"Type"		"Slider"
 		"Default"	"75"
